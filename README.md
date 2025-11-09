@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛡️ Secure Product Records  
+_A Next.js (App Router) project using AES-256-GCM encryption with server-side decryption_
 
-## Getting Started
+---
 
-First, run the development server:
+## 🚀 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project demonstrates how to **securely fetch, encrypt, and decrypt data in Next.js (App Router)** using **AES-256-GCM** encryption.  
+The app displays a list of encrypted **Product Cards** (fetched via an internal API route), **decrypts them on the server**, and renders them in a **responsive, animated UI** built with **Tailwind CSS** and **Framer Motion**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧩 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🔐 **AES-256-GCM Encryption & Decryption**
+  - Encryption happens in the API route.
+  - Decryption happens **only on the server** (never exposed to the client).
+  - Prevents sensitive data from being leaked over the network.
 
-## Learn More
+- ⚡ **Server-Side Rendering (SSR)**
+  - Data is decrypted and rendered server-side in `app/page.tsx`.
 
-To learn more about Next.js, take a look at the following resources:
+- 🎨 **Modern UI**
+  - Built with **Tailwind CSS** and **Framer Motion**.
+  - Responsive card layout for products.
+  - Client-side search filtering and smooth hover animations.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ ## Run the project
+  npm run dev 
 
-## Deploy on Vercel
+  ## Encrypted Key
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  - In .local.env kindly paste 
+  ENCRYPTION_KEY="MIjddwqnMj5C22PTeaoqB4qQ5Ipi/05VnJ0V2ltC2Qs=";
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
